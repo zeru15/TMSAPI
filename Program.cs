@@ -10,6 +10,12 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
+app.UseMiddleware<RequestLoggingMiddleware>();
+
+app.UseExceptionHandler("/error");
+
+app.UseHttpsRedirection();
+
 // Configure the HTTP request pipeline.
 app.UseRouting();
 
