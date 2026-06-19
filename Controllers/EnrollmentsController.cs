@@ -25,7 +25,12 @@ public class EnrollmentsController(IEnrollmentService enrollmentService) : Contr
         return CreatedAtAction(nameof(GetById), new {id = record.Id}, record);
     }
 
-    
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(string id)
+    {
+        var deleted = await enrollmentService.DeleteAsync(id);
+        return deleted ? NoContent() : NotFound();
+    }
 }
 
 public record CreateEnrollmentRequest(string StudentId, string CourseCode);
