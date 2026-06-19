@@ -7,6 +7,8 @@ builder.Services.AddControllers();
 builder.Services.AddAuthentication();
 builder.Services.AddAuthorization();
 
+builder.Services.AddProblemDetails();
+
 builder.Services.AddSingleton<EnrollmentWorker>();
 builder.Services.AddScoped<IEnrollmentService, EnrollmentService>();
 
@@ -28,7 +30,7 @@ var app = builder.Build();
 
 app.UseMiddleware<RequestLoggingMiddleware>();
 
-app.UseExceptionHandler("/error");
+app.UseExceptionHandler();
 
 app.UseHttpsRedirection();
 
@@ -41,13 +43,21 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseStatusCodePages();
 
-app.MapGet("/api/assessments/results", () => Results.Ok(new
+
+// app.MapGet("/api/assessments/results", () => Results.Ok(new
+// {
+// courseCode = "CS-101", 
+// studentId = "S-001",
+// letterGrade = "A"
+// })).RequireAuthorization();
+
+app.MapGet("/api/error", () =>
 {
-courseCode = "CS-101", 
-studentId = "S-001",
-letterGrade = "A"
-})).RequireAuthorization();
+    throw new TmsDatabaseException(
+        "Simulated database failure for ProblemDetails testing");
+});
 
 
 app.Run();
