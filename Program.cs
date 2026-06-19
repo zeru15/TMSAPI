@@ -32,6 +32,8 @@ app.UseExceptionHandler("/error");
 
 app.UseHttpsRedirection();
 
+app.MapControllers();
+
 // Configure the HTTP request pipeline.
 app.UseRouting();
 
