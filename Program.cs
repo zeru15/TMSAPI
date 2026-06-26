@@ -17,8 +17,8 @@ builder.Services.AddScoped<IEnrollmentService, EnrollmentService>();
 
 builder.Host.UseDefaultServiceProvider(options =>
 {
-options.ValidateScopes = true;
-options.ValidateOnBuild = true;
+    options.ValidateScopes = true;
+    options.ValidateOnBuild = true;
 });
 
 
@@ -30,7 +30,9 @@ builder.Services
 
 // Register TmsDbContext scoped for incoming HTTP requests
 builder.Services.AddDbContext<TmsDbContext>(options =>
-options.UseNpgsql(builder.Configuration.GetConnectionString("TmsDatabase")));
+options.UseNpgsql(builder.Configuration.GetConnectionString("TmsDatabase"))
+.LogTo(Console.WriteLine, LogLevel.Information) // Log SQL to output window
+.EnableSensitiveDataLogging());  // Show parameters in querylogs (dev only)
 
 
 var app = builder.Build();
@@ -65,6 +67,8 @@ app.MapGet("/api/error", () =>
     throw new TmsDatabaseException(
         "Simulated database failure for ProblemDetails testing");
 });
+
+
 
 
 app.Run();
