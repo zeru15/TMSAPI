@@ -12,7 +12,7 @@ using TmsApi.Data;
 namespace TmsApi.Migrations
 {
     [DbContext(typeof(TmsDbContext))]
-    [Migration("20260624141042_InitialCreate")]
+    [Migration("20260626155936_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
