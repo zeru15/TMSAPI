@@ -18,7 +18,10 @@ public class CourseConfiguration : IEntityTypeConfiguration<Course>
             .IsRequired()
             .HasMaxLength(200);
 
-        builder.Property(c => c.Capacity)
-            .IsRequired();
+        builder.HasIndex(c => c.Code).IsUnique();
+
+        builder.HasMany(c => c.Enrollments)
+               .WithOne(e => e.Course)
+               .HasForeignKey(e => e.CourseId);
     }
 }
