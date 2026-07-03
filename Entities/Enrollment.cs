@@ -9,6 +9,8 @@ public class Enrollment
     // Nullable, as student may be currently enrolled
     public decimal? Grade { get; set; } 
     public DateTime EnrolledAt { get; set; } = DateTime.UtcNow;
+    public int Year { get; set; }
+    public bool IsArchived { get; set; }
     // Navigation properties back to entities
     public Student Student { get; set; } = null!;
     public Course Course { get; set; } = null!;
