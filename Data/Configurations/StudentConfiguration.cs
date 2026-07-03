@@ -23,5 +23,13 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
 
         builder.Property(s => s.IsActive)
             .IsRequired();
+
+        builder.Property(s => s.Version)
+               .IsRowVersion();
+
+        builder.HasQueryFilter(s => !s.IsDeleted);
+
+        // Shadow property
+        builder.Property<DateTime>("LastUpdated");
     }
 }
