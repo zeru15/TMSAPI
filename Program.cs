@@ -40,6 +40,8 @@ options.UseNpgsql(builder.Configuration.GetConnectionString("TmsDatabase"))
 
 builder.Services.AddScoped<ICourseService, CourseService>();
 
+builder.Services.AddScoped<IEnrollmentService, EnrollmentService>();
+
 var app = builder.Build();
 
 app.UseMiddleware<RequestLoggingMiddleware>();

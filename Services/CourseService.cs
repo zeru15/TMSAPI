@@ -46,7 +46,14 @@ public class CourseService(TmsDbContext context, ILogger<CourseService> logger) 
 
         logger.LogInformation("Created course {CourseId} ({Code})", course.
         Id, course.Code);
-        
+
         return (await GetByIdAsync(course.Id, ct))!;
+    }
+
+    public Task<bool> CodeExistsAsync(string code, CancellationToken ct)
+    {
+        return context.Courses
+            .AsNoTracking()
+            .AnyAsync(c => c.Code == code, ct);
     }
 }
