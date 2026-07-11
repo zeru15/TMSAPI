@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using TmsApi.Data;
 using TmsApi.Entities;
+using TmsApi.Filters;
+using TmsApi.Persistence;
 using TmsApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,13 +12,18 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<AuditLogFilter>();
+});
+
 builder.Services.AddAuthentication();
 builder.Services.AddAuthorization();
 
 builder.Services.AddProblemDetails();
 builder.Services.AddOpenApi();
 
-builder.Services.AddSingleton<EnrollmentWorker>();
+// builder.Services.AddSingleton<EnrollmentWorker>();
 builder.Services.AddScoped<IEnrollmentService, EnrollmentService>();
 
 builder.Host.UseDefaultServiceProvider(options =>
@@ -63,8 +70,8 @@ app.UseStatusCodePages();
 
 if (app.Environment.IsDevelopment())
 {
-app.MapOpenApi();
-app.MapScalarApiReference();
+    app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 
@@ -119,6 +126,13 @@ new() { StudentId = students[3].Id, CourseId = courses[1].Id, Grade = 3.9m }
         context.Enrollments.AddRange(enrollments);
         context.SaveChanges();
     }
+}
+
+if (app.Environment.IsDevelopment())
+{
+    using var scope = app.Services.CreateScope();
+    var context = scope.ServiceProvider.GetRequiredService<TmsDbContext>();
+    await DataSeeder.SeedAsync(context);
 }
 
 app.Run();
