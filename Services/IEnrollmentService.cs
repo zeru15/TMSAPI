@@ -1,5 +1,6 @@
 using TmsApi.Dtos;
 namespace TmsApi.Services;
+
 public interface IEnrollmentService
 {
     Task<EnrollmentResponseDto?> GetByIdAsync(
@@ -11,4 +12,7 @@ public interface IEnrollmentService
         int courseId,
         EnrollStudentRequest request,
         CancellationToken ct);
+    Task<IReadOnlyList<EnrollmentResponseDto>> GetByCourseAsync(
+    int courseId,
+    CancellationToken ct);
 }
