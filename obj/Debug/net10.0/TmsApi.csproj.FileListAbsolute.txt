@@ -122,3 +122,7 @@ C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\obj\Debu
 C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\bin\Debug\net10.0\Microsoft.OpenApi.dll
 C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\bin\Debug\net10.0\Scalar.AspNetCore.dll
+C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\bin\Debug\net10.0\Asp.Versioning.Abstractions.dll
+C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\bin\Debug\net10.0\Asp.Versioning.Http.dll
+C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\bin\Debug\net10.0\Asp.Versioning.Mvc.dll
+C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\bin\Debug\net10.0\Asp.Versioning.Mvc.ApiExplorer.dll
