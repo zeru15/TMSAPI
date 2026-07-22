@@ -6,6 +6,7 @@ using TmsApi.Filters;
 using TmsApi.Persistence;
 using TmsApi.Services;
 using Asp.Versioning;
+using TmsApi.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -62,6 +63,10 @@ builder.Services.AddOpenApi("v2", options =>
 });
 builder.Services.AddApiVersioning(options =>
 {
+    options.ApiVersionReader = ApiVersionReader.Combine(
+new UrlSegmentApiVersionReader(),
+new HeaderApiVersionReader("X-Api-Version"));
+
     options.DefaultApiVersion = new ApiVersion(1, 0);
     options.AssumeDefaultVersionWhenUnspecified = true;
     options.ReportApiVersions = true;
@@ -81,6 +86,8 @@ app.UseExceptionHandler();
 
 app.UseHttpsRedirection();
 
+app.UseMiddleware<V1DeprecationMiddleware>();
+
 app.MapControllers();
 
 // Configure the HTTP request pipeline.
@@ -95,11 +102,7 @@ app.UseStatusCodePages();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
-    app.MapScalarApiReference();
-}
-
-// update scalar config
-app.MapScalarApiReference(options =>
+    app.MapScalarApiReference(options =>
 {
     options.WithTitle("TMS API Reference")
     .WithTheme(ScalarTheme.DeepSpace)
@@ -110,6 +113,10 @@ app.MapScalarApiReference(options =>
     .AddDocument("v1", "API Version 1.0")
     .AddDocument("v2", "API Version 2.0");
 });
+}
+
+// update scalar config
+
 
 // app.MapGet("/api/assessments/results", () => Results.Ok(new
 // {
