@@ -20,15 +20,40 @@ export class StudentDashboardComponent {
       : "In Progress",
   );
 
+  // Stores the course selected when the user clicks Enroll
   selectedCourse = signal<Course | null>(null);
 
-  sampleCourse: Course = {
-    id: 1,
-    title: "Advanced Java Services",
-    code: "CSE-101",
-    maxCapacity: 30,
-    enrollmentCount: 12,
-  };
+  // Course catalog
+  availableCourses = signal<Course[]>([
+    {
+      id: 1,
+      title: "Advanced Java Services",
+      code: "CSE-101",
+      maxCapacity: 30,
+      enrollmentCount: 10,
+    },
+    {
+      id: 2,
+      title: "Angular UI Lab",
+      code: "CSE-210",
+      maxCapacity: 25,
+      enrollmentCount: 25,
+    },
+    {
+      id: 3,
+      title: "Database Design",
+      code: "CSE-305",
+      maxCapacity: 20,
+      enrollmentCount: 18,
+    },
+    {
+      id: 4,
+      title: "API Security Workshop",
+      code: "CSE-420",
+      maxCapacity: 40,
+      enrollmentCount: 15,
+    },
+  ]);
 
   registerForClass() {
     this.earnedCredits.update((credits) => credits + 3);

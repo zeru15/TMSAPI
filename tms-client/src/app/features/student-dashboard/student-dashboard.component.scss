@@ -1,0 +1,29 @@
+.dashboard {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  );
+  gap: 20px;
+}
+
+.empty-state {
+  padding: 25px;
+  border: 1px dashed #9ca3af;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.selection-hint {
+  margin-top: 25px;
+  padding: 14px;
+  border-left: 4px solid #2563eb;
+  border-radius: 6px;
+  background: #eff6ff;
+}
