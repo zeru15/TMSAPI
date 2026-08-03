@@ -1,0 +1,75 @@
+.enrollment-page {
+  width: min(100% - 32px, 650px);
+  margin: 40px auto;
+  padding: 30px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #9ca3af;
+  border-radius: 6px;
+  font: inherit;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 0.9rem;
+}
+
+.success {
+  padding: 15px;
+  border: 1px solid #16a34a;
+  border-radius: 7px;
+  background: #f0fdf4;
+}
+
+.backup-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.backup-row input {
+  flex: 1;
+}
+
+button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+hr {
+  margin: 25px 0;
+}

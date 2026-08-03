@@ -8,6 +8,7 @@ export const routes: Routes = [
         (m) => m.StudentDashboardComponent,
       ),
   },
+
   {
     path: "courses/:id",
     loadComponent: () =>
@@ -15,6 +16,15 @@ export const routes: Routes = [
         (m) => m.CourseDetailComponent,
       ),
   },
+
+  {
+    path: "enroll",
+    loadComponent: () =>
+      import("./features/enrollment-form/enrollment-form.component").then(
+        (m) => m.EnrollmentFormComponent,
+      ),
+  },
+
   {
     path: "",
     redirectTo: "dashboard",
