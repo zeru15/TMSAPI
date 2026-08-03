@@ -1,5 +1,10 @@
 <div class="card">
-  <h3>{{ course().title }} ({{ course().code }})</h3>
+  <h3>
+    <a [routerLink]="['/courses', course().id]">
+      {{ course().title }}
+    </a>
+    ({{ course().code }})
+  </h3>
 
   <p>
     Enrolled {{ course().enrollmentCount }} of
@@ -8,7 +13,9 @@
 
   <span
     class="badge"
-    [class.closed]="course().enrollmentCount >= course().maxCapacity"
+    [class.closed]="
+      course().enrollmentCount >= course().maxCapacity
+    "
   >
     {{
       course().enrollmentCount >= course().maxCapacity
@@ -19,7 +26,9 @@
 
   <button
     (click)="enrollClicked.emit(course())"
-    [disabled]="course().enrollmentCount >= course().maxCapacity"
+    [disabled]="
+      course().enrollmentCount >= course().maxCapacity
+    "
   >
     Enroll
   </button>
