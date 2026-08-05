@@ -133,3 +133,10 @@ C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.A
 C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Api\bin\Debug\net10.0\FluentValidation.dll
 C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Api\bin\Debug\net10.0\appsettings.Development.json
 C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Api\bin\Debug\net10.0\appsettings.json
+C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Api\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Api\bin\Debug\net10.0\MediatR.dll
+C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Api\bin\Debug\net10.0\MediatR.Contracts.dll
+C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Api\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
