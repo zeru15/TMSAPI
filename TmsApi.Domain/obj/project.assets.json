@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj",
+      "projectUniqueName": "c:\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj",
       "projectName": "TmsApi.Domain",
-      "projectPath": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj",
+      "projectPath": "c:\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj",
       "packagesPath": "C:\\Users\\Zerubabel\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\obj\\",
+      "outputPath": "c:\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Zerubabel\\AppData\\Roaming\\NuGet\\NuGet.Config"

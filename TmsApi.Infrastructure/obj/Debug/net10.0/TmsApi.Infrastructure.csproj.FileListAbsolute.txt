@@ -16,3 +16,21 @@ C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.I
 C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\obj\Debug\net10.0\ref\TmsApi.Infrastructure.dll
 C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\bin\Debug\net10.0\TmsApi.Infrastructure.runtimeconfig.json
 C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\obj\Debug\net10.0\TmsApi.Infrastructure.genruntimeconfig.cache
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\bin\Debug\net10.0\TmsApi.Infrastructure.deps.json
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\bin\Debug\net10.0\TmsApi.Infrastructure.runtimeconfig.json
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\bin\Debug\net10.0\TmsApi.Infrastructure.dll
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\bin\Debug\net10.0\TmsApi.Infrastructure.pdb
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\bin\Debug\net10.0\TmsApi.Domain.dll
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\bin\Debug\net10.0\TmsApi.Domain.pdb
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\obj\Debug\net10.0\TmsApi.Infrastructure.csproj.AssemblyReference.cache
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\obj\Debug\net10.0\TmsApi.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\obj\Debug\net10.0\TmsApi.Infrastructure.AssemblyInfoInputs.cache
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\obj\Debug\net10.0\TmsApi.Infrastructure.AssemblyInfo.cs
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\obj\Debug\net10.0\TmsApi.Infrastructure.csproj.CoreCompileInputs.cache
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\obj\Debug\net10.0\TmsApi.Infrastructure.sourcelink.json
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\obj\Debug\net10.0\TmsApi.I.261095D6.Up2Date
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\obj\Debug\net10.0\TmsApi.Infrastructure.dll
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\obj\Debug\net10.0\refint\TmsApi.Infrastructure.dll
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\obj\Debug\net10.0\TmsApi.Infrastructure.pdb
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\obj\Debug\net10.0\TmsApi.Infrastructure.genruntimeconfig.cache
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Infrastructure\obj\Debug\net10.0\ref\TmsApi.Infrastructure.dll

@@ -16,3 +16,21 @@ C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.A
 c:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Application\obj\Debug\net10.0\ref\TmsApi.Application.dll
 C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Application\bin\Debug\net10.0\TmsApi.Infrastructure.dll
 C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Application\bin\Debug\net10.0\TmsApi.Infrastructure.pdb
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\bin\Debug\net10.0\TmsApi.Application.deps.json
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\bin\Debug\net10.0\TmsApi.Application.dll
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\bin\Debug\net10.0\TmsApi.Application.pdb
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\bin\Debug\net10.0\TmsApi.Domain.dll
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\bin\Debug\net10.0\TmsApi.Infrastructure.dll
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\bin\Debug\net10.0\TmsApi.Domain.pdb
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\bin\Debug\net10.0\TmsApi.Infrastructure.pdb
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\obj\Debug\net10.0\TmsApi.Application.csproj.AssemblyReference.cache
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\obj\Debug\net10.0\TmsApi.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\obj\Debug\net10.0\TmsApi.Application.AssemblyInfoInputs.cache
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\obj\Debug\net10.0\TmsApi.Application.AssemblyInfo.cs
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\obj\Debug\net10.0\TmsApi.Application.csproj.CoreCompileInputs.cache
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\obj\Debug\net10.0\TmsApi.Application.sourcelink.json
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\obj\Debug\net10.0\TmsApi.A.8F6B91CF.Up2Date
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\obj\Debug\net10.0\TmsApi.Application.dll
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\obj\Debug\net10.0\refint\TmsApi.Application.dll
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\obj\Debug\net10.0\TmsApi.Application.pdb
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Application\obj\Debug\net10.0\ref\TmsApi.Application.dll

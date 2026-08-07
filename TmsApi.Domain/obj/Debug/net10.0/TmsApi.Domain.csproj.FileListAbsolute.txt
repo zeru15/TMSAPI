@@ -10,3 +10,15 @@ C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.D
 C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Domain\obj\Debug\net10.0\refint\TmsApi.Domain.dll
 C:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Domain\obj\Debug\net10.0\TmsApi.Domain.pdb
 c:\Users\Zerubabel\OneDrive - randd-group.com\My Files\Qiyas AAU\TmsApi\TmsApi.Domain\obj\Debug\net10.0\ref\TmsApi.Domain.dll
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Domain\bin\Debug\net10.0\TmsApi.Domain.deps.json
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Domain\bin\Debug\net10.0\TmsApi.Domain.dll
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Domain\bin\Debug\net10.0\TmsApi.Domain.pdb
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Domain\obj\Debug\net10.0\TmsApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Domain\obj\Debug\net10.0\TmsApi.Domain.AssemblyInfoInputs.cache
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Domain\obj\Debug\net10.0\TmsApi.Domain.AssemblyInfo.cs
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Domain\obj\Debug\net10.0\TmsApi.Domain.csproj.CoreCompileInputs.cache
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Domain\obj\Debug\net10.0\TmsApi.Domain.sourcelink.json
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Domain\obj\Debug\net10.0\TmsApi.Domain.dll
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Domain\obj\Debug\net10.0\refint\TmsApi.Domain.dll
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Domain\obj\Debug\net10.0\TmsApi.Domain.pdb
+C:\My Files\Qiyas AAU\TmsApi\TmsApi.Domain\obj\Debug\net10.0\ref\TmsApi.Domain.dll
