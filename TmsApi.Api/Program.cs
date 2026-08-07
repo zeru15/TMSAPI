@@ -83,6 +83,14 @@ new HeaderApiVersionReader("X-Api-Version"));
 builder.Services.AddDbContext<TmsDbContext>(options =>
 options.UseNpgsql(builder.Configuration.GetConnectionString("TmsDatabase")));
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngular", policy =>
+        policy.WithOrigins("http://localhost:4200")
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+});
+
 var app = builder.Build();
 
 app.UseMiddleware<RequestLoggingMiddleware>();
@@ -119,6 +127,8 @@ if (app.Environment.IsDevelopment())
     .AddDocument("v2", "API Version 2.0");
 });
 }
+
+app.UseCors("AllowAngular");
 
 // update scalar config
 

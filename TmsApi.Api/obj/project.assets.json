@@ -2769,11 +2769,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Api\\TmsApi.Api.csproj",
+      "projectUniqueName": "C:\\My Files\\Qiyas AAU\\TMSAPI\\TmsApi.Api\\TmsApi.Api.csproj",
       "projectName": "TmsApi.Api",
-      "projectPath": "C:\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Api\\TmsApi.Api.csproj",
+      "projectPath": "C:\\My Files\\Qiyas AAU\\TMSAPI\\TmsApi.Api\\TmsApi.Api.csproj",
       "packagesPath": "C:\\Users\\Zerubabel\\.nuget\\packages\\",
-      "outputPath": "C:\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Api\\obj\\",
+      "outputPath": "C:\\My Files\\Qiyas AAU\\TMSAPI\\TmsApi.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Zerubabel\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -2789,11 +2789,11 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Application\\TmsApi.Application.csproj": {
-              "projectPath": "C:\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Application\\TmsApi.Application.csproj"
+            "C:\\My Files\\Qiyas AAU\\TMSAPI\\TmsApi.Application\\TmsApi.Application.csproj": {
+              "projectPath": "C:\\My Files\\Qiyas AAU\\TMSAPI\\TmsApi.Application\\TmsApi.Application.csproj"
             },
-            "C:\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj": {
-              "projectPath": "C:\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj"
+            "C:\\My Files\\Qiyas AAU\\TMSAPI\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj": {
+              "projectPath": "C:\\My Files\\Qiyas AAU\\TMSAPI\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj"
             }
           }
         }
