@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Api\\TmsApi.Api.csproj": {}
+    "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Api\\TmsApi.Api.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Api\\TmsApi.Api.csproj": {
+    "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Api\\TmsApi.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Api\\TmsApi.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Api\\TmsApi.Api.csproj",
         "projectName": "TmsApi.Api",
-        "projectPath": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Api\\TmsApi.Api.csproj",
+        "projectPath": "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Api\\TmsApi.Api.csproj",
         "packagesPath": "C:\\Users\\Zerubabel\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Api\\obj\\",
+        "outputPath": "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Zerubabel\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -27,11 +27,11 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Application\\TmsApi.Application.csproj": {
-                "projectPath": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Application\\TmsApi.Application.csproj"
+              "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Application\\TmsApi.Application.csproj": {
+                "projectPath": "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Application\\TmsApi.Application.csproj"
               },
-              "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj": {
-                "projectPath": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj"
+              "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj"
               }
             }
           }
@@ -519,14 +519,14 @@
         }
       }
     },
-    "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Application\\TmsApi.Application.csproj": {
+    "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Application\\TmsApi.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Application\\TmsApi.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Application\\TmsApi.Application.csproj",
         "projectName": "TmsApi.Application",
-        "projectPath": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Application\\TmsApi.Application.csproj",
+        "projectPath": "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Application\\TmsApi.Application.csproj",
         "packagesPath": "C:\\Users\\Zerubabel\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Application\\obj\\",
+        "outputPath": "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Zerubabel\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -542,11 +542,11 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj": {
-                "projectPath": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj"
+              "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj": {
+                "projectPath": "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj"
               },
-              "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj": {
-                "projectPath": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj"
+              "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj"
               }
             }
           }
@@ -1022,14 +1022,14 @@
         }
       }
     },
-    "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj": {
+    "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj",
         "projectName": "TmsApi.Domain",
-        "projectPath": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj",
+        "projectPath": "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj",
         "packagesPath": "C:\\Users\\Zerubabel\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Zerubabel\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1357,14 +1357,14 @@
         }
       }
     },
-    "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj": {
+    "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj",
         "projectName": "TmsApi.Infrastructure",
-        "projectPath": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Zerubabel\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Zerubabel\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1380,8 +1380,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj": {
-                "projectPath": "c:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj"
+              "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj": {
+                "projectPath": "C:\\Users\\Zerubabel\\OneDrive - randd-group.com\\My Files\\Qiyas AAU\\TmsApi\\TmsApi.Domain\\TmsApi.Domain.csproj"
               }
             }
           }
