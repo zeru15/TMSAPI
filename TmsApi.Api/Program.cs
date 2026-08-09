@@ -8,8 +8,16 @@ using TmsApi.Application.Options;
 using TmsApi.Application.Services;
 using TmsApi.Domain.Entities;
 using TmsApi.Infrastructure.Persistence;
+using FluentValidation;
+using MediatR;
+using TmsApi.Api.ExceptionHandlers;
+using TmsApi.Application.Behaviors;
+using TmsApi.Application.Enrollments.Commands;
+
+
 
 using DataSeeder = TmsApi.Infrastructure.Persistence.DataSeeder;
+using TmsApi.Application.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -90,6 +98,29 @@ builder.Services.AddCors(options =>
             .AllowAnyHeader()
             .AllowAnyMethod());
 });
+
+
+
+builder.Services.AddMediatR(cfg =>
+    cfg.RegisterServicesFromAssembly(
+        typeof(EnrollStudentHandler).Assembly));
+
+builder.Services.AddValidatorsFromAssembly(
+    typeof(EnrollStudentValidator).Assembly);
+
+// LoggingBehavior FIRST
+builder.Services.AddTransient(
+    typeof(IPipelineBehavior<,>),
+    typeof(LoggingBehavior<,>));
+
+// ValidationBehavior SECOND
+builder.Services.AddTransient(
+    typeof(IPipelineBehavior<,>),
+    typeof(ValidationBehavior<,>));
+
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
+
 
 var app = builder.Build();
 
