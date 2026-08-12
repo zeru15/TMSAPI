@@ -5,7 +5,7 @@ using TmsApi.Application.Interfaces;
 using TmsApi.Domain.Entities;
 using TmsApi.Infrastructure.Persistence;
 
-namespace TmsApi.Application.Services;
+namespace TmsApi.Infrastructure.Services;
 
 public class CourseService(TmsDbContext context, ILogger<CourseService> logger) : ICourseService
 {
@@ -119,5 +119,17 @@ public class CourseService(TmsDbContext context, ILogger<CourseService> logger) 
             Page = request.Page,
             PageSize = request.PageSize
         };
+    }
+    public async Task<List<CourseResponseDto>> GetAllAsync(CancellationToken ct)
+    {
+        return await context.Courses
+            .AsNoTracking()
+            .Select(c => new CourseResponseDto(
+                c.Id,
+                c.Code,
+                c.Title,
+                c.MaxCapacity,
+                c.Enrollments.Count))
+            .ToListAsync(ct);
     }
 }

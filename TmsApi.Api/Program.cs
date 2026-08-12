@@ -5,7 +5,6 @@ using TmsApi.Api.Filters;
 using TmsApi.Api.Middleware;
 using TmsApi.Application.Exceptions;
 using TmsApi.Application.Options;
-using TmsApi.Application.Services;
 using TmsApi.Domain.Entities;
 using TmsApi.Infrastructure.Persistence;
 using FluentValidation;
@@ -13,11 +12,12 @@ using MediatR;
 using TmsApi.Api.ExceptionHandlers;
 using TmsApi.Application.Behaviors;
 using TmsApi.Application.Enrollments.Commands;
-
+using TmsApi.Application.Interfaces;
+using TmsApi.Infrastructure.Services;
 
 
 using DataSeeder = TmsApi.Infrastructure.Persistence.DataSeeder;
-using TmsApi.Application.Interfaces;
+using Microsoft.Extensions.Caching.Hybrid;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -120,6 +120,18 @@ builder.Services.AddTransient(
 
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
+
+
+builder.Services.AddHybridCache(options =>
+{
+    options.DefaultEntryOptions = new HybridCacheEntryOptions
+    {
+        Expiration = TimeSpan.FromMinutes(10),
+        LocalCacheExpiration = TimeSpan.FromMinutes(2)
+    };
+});
+
+builder.Services.AddScoped<ICachedCourseService, CachedCourseService>();
 
 
 var app = builder.Build();

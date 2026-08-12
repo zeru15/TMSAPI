@@ -2,7 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TmsApi.Domain\TmsApi.Domain.csproj" />
-    <ProjectReference Include="..\TmsApi.Infrastructure\TmsApi.Infrastructure.csproj" />
+    <!-- <ProjectReference Include="..\TmsApi.Infrastructure\TmsApi.Infrastructure.csproj" /> -->
   </ItemGroup>
 
   <ItemGroup>

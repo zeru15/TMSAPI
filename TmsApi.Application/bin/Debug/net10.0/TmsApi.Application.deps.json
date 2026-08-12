@@ -12,8 +12,7 @@
           "FluentValidation.DependencyInjectionExtensions": "12.1.1",
           "MediatR": "14.2.0",
           "Microsoft.EntityFrameworkCore": "10.0.10",
-          "TmsApi.Domain": "1.0.0",
-          "TmsApi.Infrastructure": "1.0.0"
+          "TmsApi.Domain": "1.0.0"
         },
         "runtime": {
           "TmsApi.Application.dll": {}
@@ -77,17 +76,6 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/10.0.10": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "10.0.10"
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.EntityFrameworkCore.Relational.dll": {
-            "assemblyVersion": "10.0.10.0",
-            "fileVersion": "10.0.1026.32716"
-          }
-        }
-      },
       "Microsoft.IdentityModel.Abstractions/8.14.0": {
         "runtime": {
           "lib/net9.0/Microsoft.IdentityModel.Abstractions.dll": {
@@ -129,44 +117,9 @@
           }
         }
       },
-      "Npgsql/10.0.3": {
-        "runtime": {
-          "lib/net10.0/Npgsql.dll": {
-            "assemblyVersion": "10.0.3.0",
-            "fileVersion": "10.0.3.0"
-          }
-        }
-      },
-      "Npgsql.EntityFrameworkCore.PostgreSQL/10.0.3": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "10.0.10",
-          "Microsoft.EntityFrameworkCore.Relational": "10.0.10",
-          "Npgsql": "10.0.3"
-        },
-        "runtime": {
-          "lib/net10.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
-            "assemblyVersion": "10.0.3.0",
-            "fileVersion": "10.0.3.0"
-          }
-        }
-      },
       "TmsApi.Domain/1.0.0": {
         "runtime": {
           "TmsApi.Domain.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "TmsApi.Infrastructure/1.0.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "10.0.10",
-          "Microsoft.EntityFrameworkCore.Relational": "10.0.10",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.3",
-          "TmsApi.Domain": "1.0.0"
-        },
-        "runtime": {
-          "TmsApi.Infrastructure.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -222,13 +175,6 @@
       "path": "microsoft.entityframeworkcore.abstractions/10.0.10",
       "hashPath": "microsoft.entityframeworkcore.abstractions.10.0.10.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Relational/10.0.10": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-wNonj40aZxia+GtuBiiD6ZqVh4h6y5Nje1bGdmzZ8/ui0QRsAN+S0SIrLHFCEGbG9cDbeaE40sh+Lr7o9rRs6g==",
-      "path": "microsoft.entityframeworkcore.relational/10.0.10",
-      "hashPath": "microsoft.entityframeworkcore.relational.10.0.10.nupkg.sha512"
-    },
     "Microsoft.IdentityModel.Abstractions/8.14.0": {
       "type": "package",
       "serviceable": true,
@@ -257,26 +203,7 @@
       "path": "microsoft.identitymodel.tokens/8.14.0",
       "hashPath": "microsoft.identitymodel.tokens.8.14.0.nupkg.sha512"
     },
-    "Npgsql/10.0.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7nb5YzXuvWWJxB0J8DiyL3we+X4FOctZrt0fIBnucOIaIevFEEwGQVZKtiu9olXdlNAK1eNgqSral6r/jlhI4w==",
-      "path": "npgsql/10.0.3",
-      "hashPath": "npgsql.10.0.3.nupkg.sha512"
-    },
-    "Npgsql.EntityFrameworkCore.PostgreSQL/10.0.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-IPGrrZnRkuW7OlHDhUESZz4G5DLkW7Nej/O3Cx+0iTsgyU5XJxBgpsvTHLloo3WWuAKKbDHXBvWPVkX1deRh1Q==",
-      "path": "npgsql.entityframeworkcore.postgresql/10.0.3",
-      "hashPath": "npgsql.entityframeworkcore.postgresql.10.0.3.nupkg.sha512"
-    },
     "TmsApi.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "TmsApi.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
