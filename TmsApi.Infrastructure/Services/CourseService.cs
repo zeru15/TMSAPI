@@ -1,10 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using TmsApi.Application.DTOs;
+using TmsApi.Application.Interfaces;
 using TmsApi.Domain.Entities;
 using TmsApi.Infrastructure.Persistence;
 
-namespace TmsApi.Application.Services;
+namespace TmsApi.Infrastructure.Services;
 
 public class CourseService(TmsDbContext context, ILogger<CourseService> logger) : ICourseService
 {
@@ -23,6 +24,13 @@ public class CourseService(TmsDbContext context, ILogger<CourseService> logger) 
                       c.Id, c.Code, c.Title, c.MaxCapacity, c.Enrollments.Count))
                       .FirstOrDefaultAsync(ct);
 
+    }
+
+    public Task<Course?> GetByCodeAsync(string code, CancellationToken ct)
+    {
+        return context.Courses
+            .Include(c => c.Enrollments)
+            .FirstOrDefaultAsync(c => c.Code == code, ct);
     }
 
     // public async Task<Course> CreateAsync(Course course, CancellationToken ct)
@@ -111,5 +119,17 @@ public class CourseService(TmsDbContext context, ILogger<CourseService> logger) 
             Page = request.Page,
             PageSize = request.PageSize
         };
+    }
+    public async Task<List<CourseResponseDto>> GetAllAsync(CancellationToken ct)
+    {
+        return await context.Courses
+            .AsNoTracking()
+            .Select(c => new CourseResponseDto(
+                c.Id,
+                c.Code,
+                c.Title,
+                c.MaxCapacity,
+                c.Enrollments.Count))
+            .ToListAsync(ct);
     }
 }

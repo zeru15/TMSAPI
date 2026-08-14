@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using TmsApi.Application.DTOs;
-using TmsApi.Application.Services;
+using TmsApi.Application.Interfaces;
+using TmsApi.Infrastructure.Services;
 
 namespace TmsApi.Api.Controllers;
 

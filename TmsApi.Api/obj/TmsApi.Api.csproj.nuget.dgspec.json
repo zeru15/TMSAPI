@@ -77,6 +77,10 @@
               "target": "Package",
               "version": "[10.0.10, )"
             },
+            "Microsoft.Extensions.Caching.Hybrid": {
+              "target": "Package",
+              "version": "[10.8.0, )"
+            },
             "Scalar.AspNetCore": {
               "target": "Package",
               "version": "[2.16.9, )"
@@ -101,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.303/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
@@ -544,9 +548,6 @@
             "projectReferences": {
               "C:\\My Files\\Qiyas AAU\\TMSAPI\\TmsApi.Domain\\TmsApi.Domain.csproj": {
                 "projectPath": "C:\\My Files\\Qiyas AAU\\TMSAPI\\TmsApi.Domain\\TmsApi.Domain.csproj"
-              },
-              "C:\\My Files\\Qiyas AAU\\TMSAPI\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj": {
-                "projectPath": "C:\\My Files\\Qiyas AAU\\TMSAPI\\TmsApi.Infrastructure\\TmsApi.Infrastructure.csproj"
               }
             }
           }
@@ -604,7 +605,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.303/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
@@ -1079,7 +1080,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.303/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1380,6 +1381,9 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
+              "C:\\My Files\\Qiyas AAU\\TMSAPI\\TmsApi.Application\\TmsApi.Application.csproj": {
+                "projectPath": "C:\\My Files\\Qiyas AAU\\TMSAPI\\TmsApi.Application\\TmsApi.Application.csproj"
+              },
               "C:\\My Files\\Qiyas AAU\\TMSAPI\\TmsApi.Domain\\TmsApi.Domain.csproj": {
                 "projectPath": "C:\\My Files\\Qiyas AAU\\TMSAPI\\TmsApi.Domain\\TmsApi.Domain.csproj"
               }
@@ -1438,7 +1442,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.303/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

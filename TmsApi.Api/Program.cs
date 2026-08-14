@@ -5,11 +5,23 @@ using TmsApi.Api.Filters;
 using TmsApi.Api.Middleware;
 using TmsApi.Application.Exceptions;
 using TmsApi.Application.Options;
-using TmsApi.Application.Services;
 using TmsApi.Domain.Entities;
 using TmsApi.Infrastructure.Persistence;
+using FluentValidation;
+using MediatR;
+using TmsApi.Api.ExceptionHandlers;
+using TmsApi.Application.Behaviors;
+using TmsApi.Application.Enrollments.Commands;
+using TmsApi.Application.Interfaces;
+using TmsApi.Infrastructure.Services;
 
 using DataSeeder = TmsApi.Infrastructure.Persistence.DataSeeder;
+using Microsoft.Extensions.Caching.Hybrid;
+
+using System.Threading.RateLimiting;
+using Microsoft.AspNetCore.RateLimiting;
+using TmsApi.Api.RateLimiting;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -91,6 +103,146 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod());
 });
 
+
+
+builder.Services.AddMediatR(cfg =>
+    cfg.RegisterServicesFromAssembly(
+        typeof(EnrollStudentHandler).Assembly));
+
+builder.Services.AddValidatorsFromAssembly(
+    typeof(EnrollStudentValidator).Assembly);
+
+// LoggingBehavior FIRST
+builder.Services.AddTransient(
+    typeof(IPipelineBehavior<,>),
+    typeof(LoggingBehavior<,>));
+
+// ValidationBehavior SECOND
+builder.Services.AddTransient(
+    typeof(IPipelineBehavior<,>),
+    typeof(ValidationBehavior<,>));
+
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
+
+
+builder.Services.AddHybridCache(options =>
+{
+    options.DefaultEntryOptions = new HybridCacheEntryOptions
+    {
+        Expiration = TimeSpan.FromMinutes(10),
+        LocalCacheExpiration = TimeSpan.FromMinutes(2)
+    };
+});
+
+builder.Services.AddScoped<ICachedCourseService, CachedCourseService>();
+
+
+builder.Services.AddRateLimiter(options =>
+{
+    options.GlobalLimiter =
+        PartitionedRateLimiter.Create<HttpContext, string>(httpContext =>
+        {
+            var (partitionKey, tier) =
+                ApiKeyResolver.Resolve(httpContext);
+
+            return tier switch
+            {
+                ApiKeyTier.Paid =>
+                    RateLimitPartition.GetTokenBucketLimiter(
+                        partitionKey: $"paid:{partitionKey}",
+                        factory: _ => new TokenBucketRateLimiterOptions
+                        {
+                            TokenLimit = 200,
+                            TokensPerPeriod = 100,
+                            ReplenishmentPeriod =
+                                TimeSpan.FromSeconds(10),
+                            QueueLimit = 0,
+                            AutoReplenishment = true
+                        }),
+
+                ApiKeyTier.Free =>
+                    RateLimitPartition.GetTokenBucketLimiter(
+                        partitionKey: $"free:{partitionKey}",
+                        factory: _ => new TokenBucketRateLimiterOptions
+                        {
+                            TokenLimit = 30,
+                            TokensPerPeriod = 10,
+                            ReplenishmentPeriod =
+                                TimeSpan.FromSeconds(10),
+                            QueueLimit = 0,
+                            AutoReplenishment = true
+                        }),
+
+                _ =>
+                    RateLimitPartition.GetTokenBucketLimiter(
+                        partitionKey: $"anon:{partitionKey}",
+                        factory: _ => new TokenBucketRateLimiterOptions
+                        {
+                            TokenLimit = 10,
+                            TokensPerPeriod = 5,
+                            ReplenishmentPeriod =
+                                TimeSpan.FromSeconds(10),
+                            QueueLimit = 0,
+                            AutoReplenishment = true
+                        })
+            };
+        });
+
+    options.RejectionStatusCode =
+        StatusCodes.Status429TooManyRequests;
+
+    options.OnRejected = async (context, ct) =>
+    {
+        var retryAfter = "10";
+
+        if (context.Lease.TryGetMetadata(
+            MetadataName.RetryAfter,
+            out var retryAfterValue))
+        {
+            retryAfter =
+                ((TimeSpan)retryAfterValue).TotalSeconds
+                    .ToString("0");
+        }
+
+        context.HttpContext.Response.Headers.RetryAfter =
+            retryAfter;
+
+        context.HttpContext.Response.ContentType =
+            "application/problem+json";
+
+        await context.HttpContext.Response.WriteAsJsonAsync(
+            new ProblemDetails
+            {
+                Title = "Rate limit exceeded",
+                Detail =
+                    $"Too many requests. Retry after {retryAfter} seconds.",
+                Status = StatusCodes.Status429TooManyRequests,
+                Type =
+                    "https://tms.local/errors/rate_limit_exceeded"
+            },
+            ct);
+    };
+
+    options.AddConcurrencyLimiter("transcripts", options =>
+          {
+              options.PermitLimit = 5;
+              options.QueueLimit = 20;
+              options.QueueProcessingOrder =
+              QueueProcessingOrder.OldestFirst;
+          });
+    options.AddTokenBucketLimiter("search", options =>
+           {
+               options.TokenLimit = 10;
+               options.TokensPerPeriod = 5;
+               options.ReplenishmentPeriod =
+                         TimeSpan.FromSeconds(10);
+               options.QueueLimit = 2;
+           });
+});
+
+
+
 var app = builder.Build();
 
 app.UseMiddleware<RequestLoggingMiddleware>();
@@ -106,11 +258,14 @@ app.MapControllers();
 // Configure the HTTP request pipeline.
 app.UseRouting();
 
+app.UseRateLimiter();
+
 
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseStatusCodePages();
+
 
 if (app.Environment.IsDevelopment())
 {

@@ -1,10 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using TmsApi.Application.DTOs;
+using TmsApi.Application.Interfaces;
 using TmsApi.Domain.Entities;
 using TmsApi.Infrastructure.Persistence;
 
-namespace TmsApi.Application.Services;
+namespace TmsApi.Infrastructure.Services;
 
 public class EnrollmentService(TmsDbContext context, ILogger<EnrollmentService> logger) : IEnrollmentService
 {
@@ -41,6 +42,32 @@ public class EnrollmentService(TmsDbContext context, ILogger<EnrollmentService> 
         return (await GetByIdAsync(courseId, enrollment.Id, ct))!;
     }
 
+    public async Task<bool> ExistsAsync(
+    int studentId,
+    string courseCode,
+    CancellationToken ct)
+    {
+        return await context.Enrollments
+            .AnyAsync(
+                e => e.StudentId == studentId &&
+                     e.Course.Code == courseCode,
+                ct);
+    }
+
+    public async Task AddAsync(
+    Enrollment enrollment,
+    CancellationToken ct)
+    {
+        context.Enrollments.Add(enrollment);
+
+        await context.SaveChangesAsync(ct);
+
+        logger.LogInformation(
+            "Student {StudentId} enrolled in course {CourseId}",
+            enrollment.StudentId,
+            enrollment.CourseId);
+    }
+
     public async Task<IReadOnlyList<EnrollmentResponseDto>> GetByCourseAsync(
     int courseId,
     CancellationToken ct)
@@ -53,6 +80,17 @@ public class EnrollmentService(TmsDbContext context, ILogger<EnrollmentService> 
                 e.CourseId,
                 e.StudentId,
                 e.EnrolledAt))
+            .ToListAsync(ct);
+    }
+
+    public async Task<IReadOnlyList<Enrollment>> GetByStudentIdAsync(
+    int studentId,
+    CancellationToken ct)
+    {
+        return await context.Enrollments
+            .AsNoTracking()
+            .Include(e => e.Course)
+            .Where(e => e.StudentId == studentId)
             .ToListAsync(ct);
     }
 }

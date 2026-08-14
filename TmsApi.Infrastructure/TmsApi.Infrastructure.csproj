@@ -1,13 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\TmsApi.Domain\TmsApi.Domain.csproj" />
-  </ItemGroup>
+  <ProjectReference Include="..\TmsApi.Domain\TmsApi.Domain.csproj" />
+  <ProjectReference Include="..\TmsApi.Application\TmsApi.Application.csproj" />
+</ItemGroup>
 
-  <ItemGroup>
+  <!-- <ItemGroup>
     <Compile Include="Persistence\**\*.cs" />
     <Compile Include="..\Data\DataSeeder.cs" Link="Persistence\DataSeeder.cs" />
     <Compile Remove="Services\**\*.cs" />
+  </ItemGroup> -->
+
+  <ItemGroup>
+    <Compile Include="Persistence\**\*.cs" />
+    <Compile Include="Services\**\*.cs" />
+    <Compile Include="Caching\**\*.cs" />
+    <Compile Include="..\Data\DataSeeder.cs" Link="Persistence\DataSeeder.cs" />
   </ItemGroup>
 
   <ItemGroup>
