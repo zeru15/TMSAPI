@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using TmsApi.Application.Common;
 using TmsApi.Application.Courses.Commands;
 using TmsApi.Application.Courses.Queries;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace TmsApi.Api.Controllers.V2;
 
@@ -129,6 +130,19 @@ public class CoursesController(IMediator mediator) : ControllerBase
                     detail: error.Message,
                     type: $"https://tms.local/errors/{error.Code}");
             });
+    }
+
+    [HttpGet("search")]
+    [EnableRateLimiting("search")]
+    public async Task<IActionResult> SearchCourses(
+    [FromQuery] string? term,
+    CancellationToken ct)
+    {
+        var result = await mediator.Send(
+            new SearchCoursesQuery(term),
+            ct);
+
+        return Ok(result);
     }
 }
 
