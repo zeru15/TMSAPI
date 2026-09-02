@@ -14,6 +14,9 @@ using TmsApi.Application.Behaviors;
 using TmsApi.Application.Enrollments.Commands;
 using TmsApi.Application.Interfaces;
 using TmsApi.Infrastructure.Services;
+using TmsApi.Infrastructure.Transcripts;
+using System.Threading.Channels;
+using TmsApi.Application.Transcripts;
 
 using DataSeeder = TmsApi.Infrastructure.Persistence.DataSeeder;
 using Microsoft.Extensions.Caching.Hybrid;
@@ -22,6 +25,10 @@ using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.RateLimiting;
 using TmsApi.Api.RateLimiting;
 using Microsoft.AspNetCore.Mvc;
+using TmsApi.Infrastructure.Workers;
+using TmsApi.Api.Hubs;
+using TmsApi.Application.Notifications;
+using TmsApi.Api.Notifications;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -242,6 +249,24 @@ builder.Services.AddRateLimiter(options =>
 });
 
 
+builder.Services.AddSingleton<ITranscriptStatusStore, InMemoryTranscriptStatusStore>();
+
+builder.Services.AddSingleton(
+    Channel.CreateBounded<TranscriptRequest>(
+        new BoundedChannelOptions(100)
+        {
+            FullMode = BoundedChannelFullMode.Wait
+        }));
+
+builder.Services.AddHostedService<TranscriptWorker>();
+
+builder.Services.AddSignalR();
+
+builder.Services.AddSingleton<
+    ITranscriptNotificationService,
+    SignalRTranscriptNotificationService>();
+
+
 
 var app = builder.Build();
 
@@ -265,6 +290,8 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseStatusCodePages();
+
+app.MapHub<TmsHub>("/hubs/tms");
 
 
 if (app.Environment.IsDevelopment())

@@ -15,6 +15,8 @@
     <Compile Include="Persistence\**\*.cs" />
     <Compile Include="Services\**\*.cs" />
     <Compile Include="Caching\**\*.cs" />
+    <Compile Include="Transcripts\**\*.cs" />
+    <Compile Include="Workers\**\*.cs" />
     <Compile Include="..\Data\DataSeeder.cs" Link="Persistence\DataSeeder.cs" />
   </ItemGroup>
 
@@ -25,6 +27,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.11" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
   </ItemGroup>
 
